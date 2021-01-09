@@ -1,0 +1,12 @@
+[Unit]
+Description=Alibaba Power Control
+
+[Service]
+Restart=always
+RestartSec=3
+ExecStart=/usr/bin/power-control
+Type=dbus
+BusName=xyz.openbmc_project.State.Host
+
+[Install]
+WantedBy=sysinit.target
